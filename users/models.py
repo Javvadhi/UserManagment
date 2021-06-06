@@ -4,6 +4,7 @@ from django.db import models
 
 class User(models.Model):
     username = models.CharField(max_length=100)
+    password = models.CharField(max_length=50)
     uid = models.IntegerField(max_length=100, blank=True, unique=True, default=uuid.uuid4)
     emilid = models.EmailField()
     usercontact = models.IntegerField(max_length=10)
